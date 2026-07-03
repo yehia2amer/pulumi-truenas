@@ -1,0 +1,12 @@
+[project]
+name = "truenas-custom-app-example"
+version = "0.1.0"
+description = "Compose-based custom app example using pulumi-truenas."
+requires-python = ">=3.9"
+dependencies = [
+  "pulumi>=3.0,<4.0",
+  "pulumi-truenas",
+]
+
+[tool.uv.sources]
+pulumi-truenas = { path = "../..", editable = true }

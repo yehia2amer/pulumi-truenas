@@ -1,0 +1,19 @@
+name: arr-stack
+runtime:
+  name: python
+  options:
+    toolchain: uv
+description: Example ARR media stack built with the pulumi-truenas library.
+config:
+  arr-stack:transport:
+    description: API transport to use (jsonrpc or midclt_ssh).
+    default: jsonrpc
+  arr-stack:host:
+    description: TrueNAS host (e.g. nas.local).
+    default: truenas.local
+  arr-stack:sshUser:
+    description: SSH user for the midclt_ssh transport.
+    default: admin
+  arr-stack:apiUrl:
+    description: WebSocket JSON-RPC URL for the jsonrpc transport.
+    default: wss://truenas.local/api/current

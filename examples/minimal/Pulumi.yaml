@@ -1,0 +1,10 @@
+name: truenas-minimal
+runtime:
+  name: python
+  options:
+    toolchain: uv
+description: Minimal example — a single TrueNAS catalog app.
+config:
+  truenas-minimal:host:
+    description: TrueNAS host (e.g. nas.local).
+    default: nas.local

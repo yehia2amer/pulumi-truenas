@@ -1,0 +1,10 @@
+name: truenas-custom-app
+runtime:
+  name: python
+  options:
+    toolchain: uv
+description: Example — a custom TrueNAS app from Docker Compose YAML.
+config:
+  truenas-custom-app:host:
+    description: TrueNAS host (e.g. nas.local).
+    default: nas.local

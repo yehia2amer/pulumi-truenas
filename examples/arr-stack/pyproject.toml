@@ -1,0 +1,18 @@
+[project]
+name = "arr-stack-example"
+version = "0.1.0"
+description = "Example ARR media stack using the pulumi-truenas library."
+requires-python = ">=3.9"
+dependencies = [
+  "pulumi>=3.0,<4.0",
+  # In a real consumer this is: "pulumi-truenas>=0.1"
+  # Here it points at the local package for development.
+  "pulumi-truenas",
+]
+
+[tool.uv.sources]
+pulumi-truenas = { path = "../..", editable = true }
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
