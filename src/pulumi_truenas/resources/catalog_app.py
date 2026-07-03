@@ -138,7 +138,7 @@ class _CatalogAppProvider(ResourceProvider):
             api.close()
 
     # --- helpers ---
-    def _reconcile_power(self, api: Any, name: str, desired_state: str | None) -> None:
+    def _reconcile_power(self, api: Any, name: str, desired_state: object) -> None:
         """Start/stop the app to match desired_state (RUNNING/STOPPED)."""
         if not desired_state:
             return

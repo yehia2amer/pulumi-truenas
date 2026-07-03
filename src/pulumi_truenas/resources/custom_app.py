@@ -109,7 +109,7 @@ class _CustomAppProvider(ResourceProvider):
         finally:
             api.close()
 
-    def _reconcile_power(self, api: Any, name: str, desired_state: str | None) -> None:
+    def _reconcile_power(self, api: Any, name: str, desired_state: object) -> None:
         if not desired_state:
             return
         target = str(desired_state).upper()
